@@ -1,0 +1,83 @@
+/* Reference-led revision: white surfaces, soft gray edges, diffuse shadows,
+   and small pastel accents. Applies only to layout A. */
+body.variant-a {
+  --bg:#fcfcfd; --paper:#fff; --ink:#303139; --muted:#747680;
+  --green:#526da5; --deep:#343741; --line:#ededf1;
+  --soft:#f2f3f7; --orange:#9b6179; --coral:#aabcf3; --code:#f6f7fa;
+  background-color:var(--bg);
+  background-image:radial-gradient(#e0e1e7 .65px,transparent .65px);
+  background-size:26px 26px;
+}
+.variant-a .sidebar{background:#fff;color:#353640;border-right:1px solid #eeeef2;box-shadow:4px 0 25px #20243802}
+.variant-a .logo{background:linear-gradient(145deg,#f2efff,#eef6ff);border:1px solid #e7e5f1;color:#6c6798;box-shadow:0 3px 9px #36364d05}
+.variant-a .avatar{background:linear-gradient(140deg,#eef0ff,#e3efff 60%,#e4f6f2);color:#6476a7;box-shadow:0 0 0 6px #fafafa,0 5px 15px #30294a09;border:1px solid #e1e6f3}
+.variant-a .avatar:after{background:#6dcfb4;border-color:#fff}
+.variant-a .profile h2{color:var(--ink);letter-spacing:.5px}
+.variant-a .profile p,.variant-a .side-note,.variant-a .side-bottom{color:var(--muted)}
+.variant-a .side-note span{color:#9393a5}
+.variant-a .side-bottom{border-top-color:var(--line)}
+.variant-a .nav a{color:#777984;border-radius:10px}
+.variant-a .nav a svg{color:#92949e}
+.variant-a .nav a.active{background:#f0f3fc;color:#536a9e}
+.variant-a .nav a.active svg{color:#6c82b8}
+.variant-a .nav a.active:after{background:#a2b4ee}
+.variant-a .nav a:hover{background:#f6f7fa;color:var(--ink)}
+.variant-a .topbar{background:#ffffffed;border-bottom-color:#eeeef2}
+.variant-a .search{background:#fafafb;border-color:#efeff3;border-radius:10px}
+.variant-a .search kbd{border-color:#e8e8ee}
+.variant-a .hero{background:#fff;border:1px solid #ececf2;border-radius:17px;box-shadow:0 4px 6px #292a4802,0 14px 36px #292a4804;min-height:224px}
+.variant-a .hero:after{content:"";position:absolute;width:250px;height:250px;right:15px;top:-55px;border-radius:50%;background:radial-gradient(ellipse,#f3f3fd80,transparent 68%);pointer-events:none}
+.variant-a .eyebrow{color:#92939f;letter-spacing:1.7px}
+.variant-a .dot{background:#8ed6c3;box-shadow:0 0 0 4px #e9f8f2}
+.variant-a .hero h1{color:#303139;font-weight:620}
+.variant-a .hero p{color:#85858e}
+.variant-a .hero-art{stroke:none;z-index:1;opacity:1;right:12px;width:230px}
+.variant-a .post{border-color:#ededf2;border-radius:15px;box-shadow:0 3px 6px #2a2c4002,0 8px 24px #2a2c4003}
+.variant-a .post:hover{border-color:#d6deed;box-shadow:0 6px 22px #323d6210}
+.variant-a .post h3{color:#35353d}
+.variant-a .category{color:#647ca6}
+.variant-a .post-top .category{background:#edf3fc;border-radius:5px;padding:2px 8px;font-size:10px}
+.variant-a .post:nth-child(4n+2) .post-top .category{color:#467e70;background:#edf7f2}
+.variant-a .post:nth-child(4n+3) .post-top .category{color:#926b84;background:#faf0f5}
+.variant-a .post:nth-child(4n+4) .post-top .category{color:#81709a;background:#f3f0fa}
+.variant-a .pin{background:#fcf3e8;color:#a27d4b;border-radius:5px;padding:2px 7px}
+.variant-a .post p{color:#85858e}
+.variant-a .meta,.variant-a .meta .tags{color:#9696a0}
+.variant-a .chip{border-radius:7px;color:#80808d;border-color:#e9e9f0;box-shadow:0 2px 4px #2a2a4002}
+.variant-a .chip.active{background:#eef1fb;color:#5c72a3;border-color:#dfe5f5}
+.variant-a .aside-block{border-color:#e8e8ef}
+.variant-a .aside-title svg{color:#9296a4}
+.variant-a .intro{color:#85858f}
+.variant-a .intro strong{color:#656879}
+.variant-a .stats b{color:#555b6b}
+.variant-a .topic span{background:#f0f2f7;color:#8c91a1}
+.variant-a .tag-cloud button{color:#6b7da0;background:#eef2fa;border:1px solid #e7ecf6}
+.variant-a .tag-cloud button:nth-child(3n+2){color:#598674;background:#edf7f2;border-color:#e4f1e9}
+.variant-a .tag-cloud button:nth-child(3n){color:#a07489;background:#faf0f5;border-color:#f5e7ef}
+.variant-a .note{background:#fff;border:1px solid #ededf2;border-radius:16px;box-shadow:0 5px 20px #34334b05;color:#797782}
+.variant-a .note:before{color:#b6b1d5}
+.variant-a .note small{color:#a09ba8}
+.variant-a .article{border-color:#ededf2;border-radius:16px;box-shadow:0 6px 25px #302c4b04}
+.variant-a .article-body blockquote{background:#f7f6fc;border-left-color:#c9c0e4;color:#78738c}
+.variant-a .code-wrap{background:#f6f7fa;border:1px solid #e8eaf0;color:#4f596c}
+.variant-a .code-wrap header{color:#9299a8;border-color:#e3e6ed}
+.variant-a .code-wrap button{color:#6b7d9e}
+.variant-a .code-wrap .kw{color:#8b70ac}
+.variant-a .code-wrap .cm{color:#8d9aa1}
+.variant-a .switcher{background:#ffffffef;color:#555764;border:1px solid #e6e6ee;box-shadow:0 5px 28px #36334912;backdrop-filter:blur(12px)}
+.variant-a .switcher .hint{color:#9b9aa6;border-right-color:#e8e8ed}
+.variant-a .switcher button{color:#8b8b98}
+.variant-a .switcher button.selected{background:#edf0fa;color:#5c6f9e}
+.variant-a .collection button{border-radius:15px;border-color:#ededf2;box-shadow:0 5px 20px #34334b04}
+.variant-a a:focus-visible,.variant-a button:focus-visible,.variant-a input:focus-visible{outline-color:#b8c5ee}
+/* Keep the optional dark mode neutral, too. */
+body.variant-a.dark{--bg:#191a20;--paper:#212229;--ink:#e7e7ec;--muted:#a1a1ad;--green:#a5b8ed;--deep:#babdcf;--line:#34353f;--soft:#2b2d38;background-image:radial-gradient(#393a46 .8px,transparent .8px)}
+.variant-a.dark .sidebar,.variant-a.dark .hero,.variant-a.dark .topbar,.variant-a.dark .note{background:var(--paper);border-color:var(--line)}
+.variant-a.dark .hero h1,.variant-a.dark .post h3,.variant-a.dark .profile h2{color:var(--ink)}
+.variant-a.dark .nav a.active,.variant-a.dark .chip.active{background:#30364b;color:#c0cbee}
+.variant-a.dark .hero p,.variant-a.dark .intro,.variant-a.dark .post p,.variant-a.dark .note{color:#aaa9b5}
+.variant-a.dark .search,.variant-a.dark .switcher{background:#25262f;border-color:var(--line)}
+.variant-a.dark .code-wrap{background:#262832;color:#c2c8d9;border-color:#393b49}
+.variant-a.dark .article-body blockquote{background:#2d293b;color:#c4bad8}
+.variant-a.dark .avatar:after{border-color:var(--paper)}
+@media(max-width:700px){.variant-a .hero-art{right:-30px;width:170px;opacity:.8}.variant-a .hero{min-height:224px}.variant-a .topbar{background:var(--paper)}}
