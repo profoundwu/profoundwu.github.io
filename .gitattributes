@@ -1,0 +1,2 @@
+# Preserve upstream distributed assets without rewriting their whitespace.
+assets/lib/** -whitespace

@@ -1,0 +1,41 @@
+# Bundler cache
+.bundle
+vendor
+
+# Jekyll cache
+.jekyll-cache
+.jekyll-metadata
+_site
+
+# RubyGems
+*.gem
+
+# NPM dependencies
+node_modules
+package-lock.json
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Misc
+_sass/vendors
+assets/js/dist
+
+# Hidden system files
+*~
+.DS_Store
+Thumbs.db
+
+# Generated local previews and dependencies
+_site-drafts/
+.build-cache/
+.env
+.env.*
+!.env.example
+
+# Approved design is preserved on prototype/light-air
+prototype/

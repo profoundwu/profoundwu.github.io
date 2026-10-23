@@ -1,0 +1,44 @@
+{% if include.layout == 'home' %}
+<section class="bo-about"><h2 class="panel-heading">关于这片小天地</h2><p>记录开发中的问题与答案，<br>也留下一些尚在形成的想法。</p><div class="bo-stats"><div><b>{{ site.posts.size }}</b><span>篇文章</span></div><div><b>{{ site.categories.size }}</b><span>个专题</span></div></div></section>
+{% if site.categories.size > 0 %}<section class="bo-topics"><h2 class="panel-heading">探索专题</h2>{% assign sorted_categories = site.categories | sort %}{% for category in sorted_categories %}{% assign slug = category[0] | slugify: 'pretty' %}<a href="{{ '/categories/' | append: slug | append: '/' | relative_url }}">{{ category[0] }}<span>{{ category[1].size }}</span></a>{% endfor %}</section>{% endif %}
+{% endif %}
+<!-- Get 5 last posted/updated posts -->
+
+{% assign MAX_SIZE = 5 %}
+
+{% assign all_list = '' | split: '' %}
+
+{% for post in site.posts %}
+  {% assign datetime = post.last_modified_at | default: post.date %}
+
+  {% capture elem %}
+    {{- datetime | date: "%Y%m%d%H%M%S" -}}::{{- forloop.index0 -}}
+  {% endcapture %}
+
+  {% assign all_list = all_list | push: elem %}
+{% endfor %}
+
+{% assign all_list = all_list | sort | reverse %}
+
+{% assign update_list = '' | split: '' %}
+
+{% for entry in all_list limit: MAX_SIZE %}
+  {% assign update_list = update_list | push: entry %}
+{% endfor %}
+
+{% if update_list.size > 0 %}
+  <section id="access-lastmod">
+    <h2 class="panel-heading">{{- site.data.locales[include.lang].panel.lastmod -}}</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      {% for item in update_list %}
+        {% assign index = item | split: '::' | last | plus: 0 %}
+        {% assign post = site.posts[index] %}
+        {% assign url = post.url | relative_url %}
+        <li class="text-truncate lh-lg">
+          <a href="{{ url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <!-- #access-lastmod -->
+{% endif %}
