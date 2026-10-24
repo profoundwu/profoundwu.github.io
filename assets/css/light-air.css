@@ -71,3 +71,8 @@ article.px-1{background:#fff;border:1px solid #ededf2;border-radius:16px;padding
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;scroll-behavior:auto!important}}
 
 #main-wrapper{background:transparent}#sidebar ul li.nav-item a.nav-link{position:relative}
+
+/* Compact article TOC trigger: reference menu icon followed by its label. */
+#toc-solo-trigger{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:4px 12px;min-height:34px;vertical-align:middle}
+#toc-solo-trigger .bo-toc-icon{width:20px;height:20px;flex-shrink:0}
+#toc-solo-trigger .label{font-size:1rem;line-height:1.5}
