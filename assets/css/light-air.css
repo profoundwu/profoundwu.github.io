@@ -89,3 +89,6 @@ article[data-toc]{--text-color:#1d1d1f;--heading-color:#1d1d1f;--link-color:#006
 article[data-toc]>header h1,article[data-toc] .post-desc,article[data-toc] .content,article[data-toc] .content :is(h1,h2,h3,h4,h5,h6){color:#1d1d1f}
 article[data-toc] .content a:not(.anchor):not(.img-link){color:#0066cc}
 article[data-toc] .content a:not(.anchor):not(.img-link):hover{color:#0066cc!important;border-bottom-color:#0066cc}
+
+/* Frame the article body with two black rules. */
+article[data-toc]>.content{border-top:1px solid #000;border-bottom:1px solid #000;padding-top:24px;padding-bottom:24px;margin-top:24px;margin-bottom:24px}
