@@ -15,12 +15,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #b7c5e8;outline-offset:3px}
 #sidebar{border-right:1px solid var(--sidebar-border-color);box-shadow:4px 0 25px #20243802}
 #sidebar .profile-wrapper{padding-left:1.5rem;padding-right:1.5rem;margin-top:2.7rem;margin-bottom:1.8rem;text-align:center}
-.bo-brand{display:flex;align-items:center;justify-content:center;color:#3a3b47!important;font-size:17px;font-weight:650;letter-spacing:.6px;margin-bottom:38px}
+.bo-brand{display:flex;align-items:center;justify-content:center;color:#3a3b47!important;font-size:20px;font-weight:650;letter-spacing:.6px;margin-bottom:38px}
 .bo-logo{display:grid;place-items:center;width:38px;height:38px;border:1px solid #e7e5f1;border-radius:12px;background:linear-gradient(145deg,#f2efff,#eef6ff);color:#6c6798;font:700 20px Georgia,serif}
 #sidebar #avatar{width:112px!important;height:112px!important;margin-left:auto;margin-right:auto;box-shadow:0 0 0 6px #fafafa,0 5px 15px #30294a09}
 #sidebar #avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
-#sidebar .site-subtitle{font-size:12px;font-style:normal!important;white-space:normal;line-height:1.8;margin-top:16px;text-align:center}
-#sidebar ul li.nav-item a.nav-link{padding:13px 20px;margin:3px 20px;border-radius:10px;font-size:14px}
+#sidebar .site-subtitle{font-size:14px;font-style:normal!important;white-space:normal;line-height:1.8;margin-top:16px;text-align:center}
+#sidebar ul li.nav-item a.nav-link{padding:13px 20px;margin:3px 20px;border-radius:10px;font-size:16px}
+#sidebar ul li.nav-item a.nav-link span{font-size:1em}
 #sidebar ul li.nav-item.active a.nav-link{background:#f0f3fc;color:#5e75a8}
 #sidebar ul li.nav-item.active a.nav-link:after{content:"";width:6px;height:6px;background:#a4b6eb;border-radius:50%;position:absolute;right:16px;top:calc(50% - 3px)}
 #sidebar .sidebar-bottom{padding-left:2rem;padding-right:2rem;border-top:1px solid #ededf2;padding-top:20px;margin-top:20px}
