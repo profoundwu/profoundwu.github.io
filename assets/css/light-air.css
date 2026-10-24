@@ -76,3 +76,10 @@ article.px-1{background:#fff;border:1px solid #ededf2;border-radius:16px;padding
 #toc-solo-trigger{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:4px 12px;min-height:34px;vertical-align:middle}
 #toc-solo-trigger .bo-toc-icon{width:20px;height:20px;flex-shrink:0}
 #toc-solo-trigger .label{font-size:1rem;line-height:1.5}
+
+/* Follow the pointer with one soft highlight, preserving native TOC links. */
+#toc-popup-content{position:relative;isolation:isolate}
+#toc-popup-content a.toc-link{position:relative;z-index:1;border-radius:8px;transition:color .16s ease}
+#toc-popup-content a.bo-toc-hover{color:#526da5}
+#toc-popup-content .bo-toc-glow{position:absolute;top:0;left:0;z-index:0;pointer-events:none;border-radius:8px;border:1px solid #dce5fa;background:linear-gradient(100deg,#e3ecffed,#eee9fcbd 70%,#f3efff8c);box-shadow:0 0 13px #b8c9f32e,inset 3px 0 0 #a1b5e6;opacity:0;transition:transform .18s cubic-bezier(.2,.7,.3,1),height .18s ease,width .18s ease,opacity .12s ease}
+#toc-popup-content .bo-toc-glow.is-visible{opacity:1}
