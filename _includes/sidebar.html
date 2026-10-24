@@ -2,7 +2,7 @@
 
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
-    <a class="bo-brand" href="{{ '/' | relative_url }}"><span class="bo-logo">b.</span><span>技术与思考</span></a>
+    <a class="bo-brand" href="{{ '/' | relative_url }}">吴博的网络日志</a>
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {%- if site.avatar != empty and site.avatar -%}
         {%- capture avatar_url -%}
@@ -12,7 +12,6 @@
       {%- endif -%}
     </a>
 
-    <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <p class="site-subtitle mb-0">{{ site.tagline }}</p>
   </header>
   <!-- .profile-wrapper -->
