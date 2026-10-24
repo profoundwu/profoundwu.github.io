@@ -3,7 +3,7 @@ title: "让 Claude Code 做得更好、更快、更省：四个工作习惯"
 date: "2026-10-24 07:57:39 +0800"
 description: "从方案讨论、任务拆分、上下文管理和提示词缓存四个方面，减少 Claude Code 开发中的返工、等待和调用成本。"
 categories: [AI 使用技巧]
-tags: [Claude Code, AI编程, 工作流, 上下文管理]
+tags: [AI 编程, Claude Code]
 toc: true
 ---
 
