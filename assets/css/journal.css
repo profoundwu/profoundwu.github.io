@@ -80,6 +80,8 @@
 .bo-post article[data-toc] div[class^=language-] .code-header > span { justify-self: center; margin-left: 0; }
 @media(min-width:992px) {
   .bo-site #sidebar { display: none !important; }
+  /* Remove Chirpy's wide-screen sidebar inset so both page rules align. */
+  .bo-site #tail-wrapper { padding-inline: 0 !important; }
   .bo-post article[data-toc] { border: 0; background: transparent; }
 }
 @media(min-width:1200px) {
