@@ -39,3 +39,6 @@ _site-drafts/
 
 # Approved design is preserved on prototype/light-air
 prototype/
+
+# Local design review artifacts
+.impeccable/

@@ -1,0 +1,21 @@
+{% comment %}Collect related posts, then adjacent posts; deduplicate and exclude this post and hidden posts.{% endcomment %}
+{% assign related_candidates = '' | split: '' %}
+{% for tag in page.tags %}{% assign related_candidates = related_candidates | concat: site.tags[tag] %}{% endfor %}
+{% for category in page.categories %}{% assign related_candidates = related_candidates | concat: site.categories[category] %}{% endfor %}
+{% if page.previous %}{% assign related_candidates = related_candidates | push: page.previous %}{% endif %}
+{% if page.next %}{% assign related_candidates = related_candidates | push: page.next %}{% endif %}
+{% assign related_posts = related_candidates | uniq | where_exp: 'post', 'post.url != page.url and post.hidden != true' %}
+{% if related_posts.size > 0 %}
+<section id="related-posts" class="bo-related" aria-labelledby="related-label">
+  <h2 id="related-label">相关文章推荐</h2>
+  <ul>
+    {% for post in related_posts limit: 5 %}
+    <li><a href="{{ post.url | relative_url }}">
+      <h3>{{ post.title | escape }}</h3>
+      {% include datetime.html date=post.date lang=include.lang %}
+      <p>{% include post-summary.html %}</p>
+    </a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

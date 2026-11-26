@@ -1,6 +1,8 @@
 # Bo · 技术与思考
 
-基于 Jekyll + Chirpy 7.6，使用已确认的“轻盈白”配色。白色侧栏、浅灰点阵背景、柔和阴影，搭配少量浅蓝、粉色和薄荷色。星舰头像、Bo 和 `Stay hungry, Stay foolish.` 均已配置。
+基于 Jekyll + Chirpy 7.6。顶部导航包含文章、专题、归档和搜索。桌面首页使用带插画的欢迎区和文章列表；手机首页使用两侧留白的卡片。星舰头像及轻盈白配色保留。
+
+首页每页最多显示 5 篇真实文章；文章底部使用去重的相关推荐列表，最多 5 条。代码窗口使用红、黄、绿圆点，页脚提供 GitHub 与 RSS。
 
 站点地址：https://profoundwu.github.io
 
@@ -67,8 +69,11 @@ bundle exec htmlproofer _site --disable-external --allow-hash-href
 ## 修改外观和内容
 
 - `_config.yml`：姓名、签名、站点地址和头像。
-- `assets/css/light-air.css`：轻盈白样式。
-- `_layouts/home.html`：首页横幅、空状态和文章列表，保留 Chirpy 分页。
+- `assets/css/light-air.css`：基础阅读配色与目录样式。
+- `assets/css/journal.css`：当前桌面与手机布局。
+- `_layouts/home.html`：首页横幅、空状态和文章列表，保留每页 5 篇的分页。
+- `_includes/topbar.html`：顶部导航与搜索。
+- `_includes/related-posts.html`：合并相关文章与相邻文章，去重后最多 5 条。
 - `_includes/sidebar.html`：侧栏。
 - `_tabs/about.md`：关于页。
 - `assets/img/README.md`：星舰图片来源。
@@ -77,3 +82,5 @@ bundle exec htmlproofer _site --disable-external --allow-hash-href
 正式站点不包含原型切换器，也不发布演示文章。最初没有文章时显示空状态，发布第一篇 Markdown 后自动出现文章列表、分类和标签。
 
 主题使用 MIT 许可。星舰照片来自 SpaceX / The Planetary Society，来源页注明属于公共领域。第三方前端资源位于 `assets/lib/`，保留其上游许可文件。
+
+已确认原型保存在独立分支 `codex/prototype-journal-layout`，正式分支不包含原型代码和演示内容。

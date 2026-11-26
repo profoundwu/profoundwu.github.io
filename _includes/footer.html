@@ -1,3 +1,6 @@
-<footer aria-label="网站信息" class="d-flex flex-wrap justify-content-end text-muted py-4">
-  <p>由 <a href="https://jekyllrb.com/">Jekyll</a> 与 <a href="https://github.com/cotes2020/jekyll-theme-chirpy">Chirpy</a> 构建</p>
+<footer aria-label="网站信息">
+  <nav class="bo-social" aria-label="关注与订阅">
+    {% if site.github.username %}<a href="https://github.com/{{ site.github.username }}" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i></a>{% endif %}
+    <a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS 订阅" title="RSS 订阅"><i class="fas fa-rss" aria-hidden="true"></i></a>
+  </nav>
 </footer>

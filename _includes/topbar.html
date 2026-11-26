@@ -1,0 +1,83 @@
+<!-- The Top Bar -->
+
+<header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar">
+  <div
+    id="topbar"
+    class="d-flex align-items-center justify-content-between px-lg-3 h-100"
+  >
+    <a class="bo-header-brand" href="{{ '/' | relative_url }}"><img src="{{ site.avatar | relative_url }}" width="48" height="48" alt=""><span>吴博的网络日志</span></a>
+    <nav class="bo-header-nav" aria-label="主导航">
+      <a href="{{ '/' | relative_url }}" {% if page.layout == 'home' or page.layout == 'post' %}aria-current="page"{% endif %}>文章</a>
+      <a href="{{ '/categories/' | relative_url }}" {% if page.layout == 'categories' or page.layout == 'category' %}aria-current="page"{% endif %}>专题</a>
+      <a href="{{ '/archives/' | relative_url }}" {% if page.layout == 'archives' %}aria-current="page"{% endif %}>归档</a>
+    </nav>
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+      {% assign paths = page.url | split: '/' %}
+
+      {% if paths.size == 0 or page.layout == 'home' %}
+        <!-- index page -->
+        <span>{{ site.data.locales[include.lang].tabs.home | capitalize }}</span>
+
+      {% else %}
+        {% for item in paths %}
+          {% if forloop.first %}
+            <span>
+              <a href="{{ '/' | relative_url }}">
+                {{- site.data.locales[include.lang].tabs.home | capitalize -}}
+              </a>
+            </span>
+
+          {% elsif forloop.last %}
+            {% if page.collection == 'tabs' %}
+              <span>{{ site.data.locales[include.lang].tabs[item] | default: page.title }}</span>
+            {% else %}
+              <span>{{ page.title }}</span>
+            {% endif %}
+
+          {% elsif page.layout == 'category' or page.layout == 'tag' %}
+            <span>
+              <a href="{{ item | append: '/' | relative_url }}">
+                {{- site.data.locales[include.lang].tabs[item] | default: page.title -}}
+              </a>
+            </span>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </nav>
+    <!-- endof #breadcrumb -->
+
+    <button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="打开导航">
+      <i class="fas fa-bars fa-fw"></i>
+    </button>
+
+    <div id="topbar-title">
+      {% if page.layout == 'home' %}
+        吴博的网络日志
+      {% elsif page.collection == 'tabs' or page.layout == 'page' %}
+        {%- capture tab_key -%}{{ page.url | split: '/' }}{%- endcapture -%}
+        {{- site.data.locales[include.lang].tabs[tab_key] | default: page.title -}}
+      {% else %}
+        {{- site.data.locales[include.lang].layout[page.layout] | default: page.layout | capitalize -}}
+      {% endif %}
+    </div>
+
+    <button type="button" id="search-trigger" class="btn btn-link" aria-label="打开搜索">
+      <i class="fas fa-search fa-fw"></i>
+    </button>
+
+    <search id="search" class="align-items-center ms-3 ms-lg-0">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="搜索文章"
+        autocomplete="off"
+        placeholder="搜索"
+      >
+    </search>
+    <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">
+      {{- site.data.locales[include.lang].search.cancel -}}
+    </button>
+  </div>
+</header>

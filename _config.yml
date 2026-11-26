@@ -23,7 +23,7 @@ assets:
     enabled: true
 pwa:
   enabled: false
-paginate: 10
+paginate: 5
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
@@ -63,6 +63,7 @@ compress_html:
   ignore:
     envs: [development]
 exclude:
+  - .impeccable
   - docs
   - prototype
   - tools
